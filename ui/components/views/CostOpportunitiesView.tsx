@@ -54,7 +54,10 @@ export default function CostOpportunitiesView() {
     Message: string;
     OpportunityID: string;
     Result: string;
-    Evidence: any;
+    Evidence?: {
+      name?: string;
+      resource_id?: string;
+    } | null;
     Actor: string;
   }
   const [history] = React.useState<HistoryAction[]>([]);

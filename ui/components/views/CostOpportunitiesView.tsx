@@ -47,7 +47,13 @@ export default function CostOpportunitiesView() {
   const [busy, setBusy] = React.useState<"scan" | number | null>(null);
   const [message, setMessage] = React.useState("");
   const [selectedPR, setSelectedPR] = React.useState<IaCPullRequest | null>(null);
-  const [history, setHistory] = React.useState<any[]>([]);
+
+  interface HistoryAction {
+    ID: string;
+    CreatedAt: string;
+    Message: string;
+  }
+  const [history] = React.useState<HistoryAction[]>([]);
 
   const load = React.useCallback(() => {
     api

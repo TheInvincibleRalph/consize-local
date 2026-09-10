@@ -52,7 +52,7 @@ export default function CostOpportunitiesView() {
     ID: string;
     CreatedAt: string;
     Message: string;
-    OpportunityID: string;
+    OpportunityID: number;
     Result: string;
     Evidence?: {
       name?: string;
